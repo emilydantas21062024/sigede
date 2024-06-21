@@ -1,28 +1,101 @@
+# Nome do Projeto
+
+Descrição curta sobre o que o projeto faz.
+
+## Tecnologias Utilizadas
+
+- **Backend**: Spring Boot
+- **Frontend**: React.js
+- **Banco de Dados**: PostgreSQL
+
+## Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+
+- Java 11+
+- Node.js 14+
+- PostgreSQL 12+
+- Maven 3.6+
+- Git
+
+## Configuração do Ambiente
+
+### Banco de Dados
+
+1. Instale o PostgreSQL:
+   - Siga as instruções de instalação no site oficial: [PostgreSQL Downloads](https://www.postgresql.org/download/).
+
+2. Crie um banco de dados PostgreSQL:
+   ```sql
+   CREATE DATABASE nome_do_banco;
+
+
+## Executar o Projeto
+
+
+# Backend
+
+Siga os passos abaixo para executar o projeto:
+````
+
 # SIGEDE
+	1.	Clone o repositório:
+	
+git clone https://github.com/usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 
-SIGEDE é uma aplicação web desenvolvida com Java Spring Boot no backend e React no frontend. A aplicação permite gerenciar clientes e boletos.
+    2.	Navegue até o backend:
+    
+cd backend
 
-## Estrutura de Pastas
+   	3.	Configure as variáveis de ambiente do Spring Boot no arquivo application.properties:
 
-A estrutura de pastas do projeto é a seguinte:
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
 
-- `src/main/java/br/com/projecao/sigede`: Contém os arquivos de código fonte Java do backend.
-- `frontend/src`: Contém os arquivos de código fonte JavaScript do frontend.
-- `frontend/src/components`: Contém os componentes React criados e utilizados na aplicação.
-- `frontend/src/helpers`: Contém arquivos auxiliares, como o `axios_helper.js` que é usado para fazer requisições HTTP para a API.
+   	4.	Compile e execute a aplicação:
+mvn clean install
+mvn spring-boot:run
 
-## Como Executar o Projeto
+	5.	A aplicação estará disponível em http://localhost:8080.
+
+````
+
+## Frontend
 
 Siga os passos abaixo para executar o projeto:
 
-1. Clone o repositório para a sua máquina local usando `git clone`.
+````
+   	1.	Instale o Node.js:
+	•	Siga as instruções de instalação no site oficial: Node.js Downloads.
+	2.	Navegue até o diretório do frontend:
+      
+            cd frontend
+            
+   	3.	Instale as dependências do projeto:
 
-2. Navegue até a pasta do projeto usando `cd SIGEDE`.
+                npm install
+                
+    4. Execite a aplicação:
+    
+                npm start
+   
+`````
 
-3. Para executar o backend, navegue até a pasta `src/main/java/br/com/projecao/sigede` e execute o comando `mvn spring-boot:run`.
+Após configurar o backend e o frontend conforme descrito acima, você poderá acessar a aplicação através do navegador em http://localhost:3000. O frontend se comunicará com o backend em http://localhost:8080.
 
-4. Para executar o frontend, navegue até a pasta `frontend` e execute os comandos `npm install` para instalar as dependências e `npm start` para iniciar o servidor de desenvolvimento.
 
-5. Abra o navegador e acesse `http://localhost:3000` para ver a aplicação em execução.
+RLs Importantes
 
-6. Para criar o banco de dados, execute o script `create_database.sql` no pgAdmin.
+	•	Frontend: http://localhost:3000
+	•	Backend: http://localhost:8080
+
+Variáveis de Ambiente
+
+	•	DB_URL: URL de conexão com o banco de dados PostgreSQL
+	•	DB_USERNAME: Nome de usuário do banco de dados
+	•	DB_PASSWORD: Senha do banco de dados
+
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
